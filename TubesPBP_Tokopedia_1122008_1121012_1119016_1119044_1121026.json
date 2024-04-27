@@ -1,0 +1,1940 @@
+{
+	"info": {
+		"_postman_id": "18aeb6d3-a682-4601-80bf-2fd559bce21d",
+		"name": "Tokopedia_1122008_1121012_1119016_1119044_1121026",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32417272"
+	},
+	"item": [
+		{
+			"name": "1122008-Steven Filbert",
+			"item": [
+				{
+					"name": "Beranda",
+					"item": [
+						{
+							"name": "KategoriPilihan",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://tokopedia.coms/{id_user}/kategoripilihan",
+									"protocol": "https",
+									"host": [
+										"tokopedia",
+										"coms"
+									],
+									"path": [
+										"{id_user}",
+										"kategoripilihan"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										}
+									]
+								},
+								"description": "- GET `https://tokopedia.coms/{id_user}/kategoripilihan`\n    \n\n<img src=\"https://content.pstmn.io/73186454-6bf6-4da5-a590-2f17e98b9f09/aW1hZ2UucG5n\" width=\"940\" height=\"452\">"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": []
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\r\n  \"status\": \"success\",\r\n  \"message\": \"Kategori ada !\",\r\n  \"data\": {\r\n    \"id\": \"123\",\r\n    \"nama\": \"Jam\",\r\n  }\r\n}\r\n\r\n"
+								},
+								{
+									"name": "Failed",
+									"originalRequest": {
+										"method": "GET",
+										"header": []
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\r\n  \"status\": 500,\r\n  \"message\": \"Server Errors \"\r\n}\r\n"
+								},
+								{
+									"name": "NotFound",
+									"originalRequest": {
+										"method": "GET",
+										"header": []
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\r\n  \"status\": 404,\r\n  \"message\": \"Not Found: The requested resources doesn't exist\"\r\n}\r\n\r\n"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "DetailProduk",
+					"item": [
+						{
+							"name": "DetailProd",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "https://Tokopedia.com/products/{product_id}",
+								"description": "- `GET` `https://Tokopedia.com/products/{product_id}`\n    \n\n<img src=\"https://content.pstmn.io/8449ae94-821b-4e5f-af59-7c3268f8206d/aW1hZ2UucG5n\" width=\"940\" height=\"434\">"
+							},
+							"response": [
+								{
+									"name": "Succes",
+									"originalRequest": {
+										"method": "GET",
+										"header": []
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"message\": \"Detail produk berhasil ditemukan\",\n    \"data\": {\n        \"product_id\": \"1234\",\n        \"name\": \"Sepatu\",\n        \"price\": 100000,\n        \"description\": \"Sepatu snikers kekinian dari NIKE\"\n    }\n}"
+								},
+								{
+									"name": "Failed",
+									"originalRequest": {
+										"method": "GET",
+										"header": []
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": 500,\n  \"message\": \"Terjadi kesalahan pada server saat mengambil detail produk\"\n}\n"
+								},
+								{
+									"name": "NotFound",
+									"originalRequest": {
+										"method": "GET",
+										"header": []
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": 404,\n  \"message\": \"Produk dengan ID yang diberikan tidak ditemukan\"\n}\n"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "PencarianProduk",
+					"item": [
+						{
+							"name": "SearchProduct",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://Tokopedia.com /products/search",
+								"description": "- `POST https://Tokopedia.com /v1/products/search`  \n    Mencari product bedasarkan kata yang di input pengguna\n    \n\n<img src=\"https://content.pstmn.io/62d33c4b-c098-47e3-9e93-fb9bea0c9ae1/aW1hZ2UucG5n\" alt=\"\" height=\"423\" width=\"940\"><img src=\"https://content.pstmn.io/c30cc9de-6883-42d2-88ed-12088519b344/aW1hZ2UucG5n\" alt=\"\" height=\"423\" width=\"940\">"
+							},
+							"response": [
+								{
+									"name": "Succes",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "",
+													"value": "",
+													"type": "text",
+													"disabled": true
+												}
+											],
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "https://Tokopedia.com //products/search"
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\r\n  \"status\": 200,\r\n  \"message\": \"Pencarian produk berhasil dilakukan dan hasilnya ditemukan\",\r\n   \"search\": \"Nike\",\r\n  \"data\": [\r\n    {\r\n      \"id\": \"777777\",\r\n      \"name\": \"Nike A7\",\r\n      \"price\": 100000,\r\n      \"description\": \"Sepatu NIKE keluaran terbaru\"\r\n    },\r\n    {\r\n      \"id\": \"979797\",\r\n      \"name\": \"Nike Air Jordan\",\r\n      \"price\": 100000,\r\n      \"description\": \"Sepatu NIKE buatan Jordan\"\r\n    }\r\n  ]\r\n}\r\n"
+								},
+								{
+									"name": "Failed",
+									"originalRequest": {
+										"method": "GET",
+										"header": []
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 500,\n    \"message\": \"Terjadi kesalahan pada server saat melakukan pencarian produk\"\n}"
+								},
+								{
+									"name": "NotFound",
+									"originalRequest": {
+										"method": "GET",
+										"header": []
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 404,\n    \"message\": \"Tidak ada produk yang ditemukan berdasarkan kata kunci yang dimasukkan oleh pengguna\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Profil",
+					"item": [
+						{
+							"name": "UserProfile",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "https://Tokopedia.com/user/profile",
+								"description": "- `GET https://Tokopedia.com/v1/user/profile`\n    \n\n<img src=\"https://content.pstmn.io/307e9c9a-59a5-48a9-9f15-0b2c3b092307/aW1hZ2UucG5n\" alt=\"\" height=\"570\" width=\"940\">"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										}
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"message\": \"Informasi profil pengguna berhasil diambil\",\n    \"data\": {\n        \"user_id\": \"111\",\n        \"name\": \"Filsteven11\",\n        \"birthday\": \"06-11-2004\",\n        \"Gender\": \"Male\",\n        \"email\": \"filfil@gmail.com\",\n        \"address\": \"Jl. Dibumi, no 7777\"\n        \"noHandphone\": \"1234567890\",\n    }\n}"
+								},
+								{
+									"name": "Failed",
+									"originalRequest": {
+										"method": "GET",
+										"header": []
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": 500,\n  \"message\": \"Terjadi kesalahan pada server saat mengambil informasi profil pengguna\"\n}\n"
+								},
+								{
+									"name": "NotFound",
+									"originalRequest": {
+										"method": "GET",
+										"header": []
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": 404,\n  \"message\": \"Profil pengguna tidak ditemukan\"\n}\n"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "KeranjangBelanja",
+					"item": [
+						{
+							"name": "DeleteProdkeranjang",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://tokopedia.com/v1/carts/1/items/?Id=123",
+									"protocol": "https",
+									"host": [
+										"tokopedia",
+										"com"
+									],
+									"path": [
+										"v1",
+										"carts",
+										"1",
+										"items",
+										""
+									],
+									"query": [
+										{
+											"key": "Id",
+											"value": "123"
+										}
+									]
+								},
+								"description": "- `DEL https://tokopedia.com/v1/carts/1/items/1`\n    \n\n<img src=\"https://content.pstmn.io/66379cff-165b-4796-b199-8f77e6d3bb22/aW1hZ2UucG5n\" width=\"940\" height=\"218\">"
+							},
+							"response": [
+								{
+									"name": "Succes",
+									"originalRequest": {
+										"method": "GET",
+										"header": []
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": 200,\n  \"product_id \":987465,\n  \"nama \":\"Jam pasir\",\n  \"message\": \"Item  dihapus dari keranjang belanja \"\n}\n"
+								},
+								{
+									"name": "Failed",
+									"originalRequest": {
+										"method": "GET",
+										"header": []
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": 500,\n  \"message\": \"Terjadi kesalahan pada server saat menghapus item dari keranjang belanja\"\n}\n\n"
+								},
+								{
+									"name": "NotFound",
+									"originalRequest": {
+										"method": "GET",
+										"header": []
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": 404,\n  \"message\": \"Tidak ada item didalam keranjang anda\"\n}\n \n"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "1121012-BennedictArvin",
+			"item": [
+				{
+					"name": "DaftarTransaksi",
+					"item": [
+						{
+							"name": "TransactionsList",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "https://Tokopedia.com/user/{user_id}/transactions"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "https://Tokopedia.com/user/{user_id}/transactions"
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\r\n    \"status\": 200,\r\n    \"message\": \"Daftar transaksi pengguna berhasil ditampilkan.\",\r\n    \"data\": {\r\n        \"transaction_date\": \"12 Apr 2024\",\r\n        \"invoice_number\": \"INV/20240412/MPL/3849793444\",\r\n        \"store_name\": \"Plain As Day Official\",\r\n        \"image\": \"plain_oversize_tshirt_beige.jpg\",\r\n        \"product_name\": \"PLAIN Oversize T-Shirt Beige\",\r\n        \"quantity\": 1,\r\n        \"price\": 75000,\r\n        \"total_price\": 75000\r\n    }\r\n}"
+								},
+								{
+									"name": "Failed",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "https://Tokopedia.com/user/{user_id}/transactions"
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\r\n    \"status\": 400,\r\n    \"message\": \"Maaf, daftar transaksi tidak dapat ditampilkan.\"\r\n}"
+								},
+								{
+									"name": "NotFound",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "https://Tokopedia.com/user/{user_id}/transactions"
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\r\n    \"status\": 404,\r\n    \"message\": \"Tidak ada data pada daftar transaksi pengguna.\"\r\n}"
+								}
+							]
+						}
+					],
+					"description": "Endpoint ini akan mengambil daftar transaksi berdasarkan ID user.\n\n<img src=\"https://content.pstmn.io/b7fdd0a8-7451-47bc-aa25-b2f75e333675/aW1hZ2UucG5n\" alt=\"\" height=\"410\" width=\"940\">"
+				},
+				{
+					"name": "DetailTransaksi",
+					"item": [
+						{
+							"name": "TransactionDetail",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "https://Tokopedia.com/user/{user_id}/transactions/{transaction_id}"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "https://Tokopedia.com/user/{user_id}/transactions/{transaction_id}"
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\r\n    \"status\": 200,\r\n    \"message\": \"Detail transaksi pengguna berhasil ditampilkan.\",\r\n    \"data\": {\r\n        \"order_status\": \"Selesai\",\r\n        \"invoice_number\": \"INV/20240412/MPL/3849793444\",\r\n        \"order_date\": \"12 April 2024, 17:34 WIB\",\r\n        \"courier\": \"AnterAja\",\r\n        \"receipt_number\": \"10008674886391\",\r\n        \"address\": \"Kampus UNAI, Kab. Bandung Barat\",\r\n        \"payment_method\": \"Debit Online\",\r\n        \"total_price\": 83200\r\n    }\r\n}"
+								},
+								{
+									"name": "Failed",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "https://Tokopedia.com/user/{user_id}/transactions/{transaction_id}"
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\r\n    \"status\": 400,\r\n    \"message\": \"Maaf, detail transaksi produk tidak dapat diproses.\"\r\n}"
+								},
+								{
+									"name": "NotFound",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "https://Tokopedia.com/user/{user_id}/transactions/{transaction_id}"
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\r\n    \"status\": 404,\r\n    \"message\": \"Detail transaksi produk tidak ada.\"\r\n}"
+								}
+							]
+						}
+					],
+					"description": "Endpoint ini akan menampilkan detail dari transaksi setiap item yang dipesan user.\n\n<img src=\"https://content.pstmn.io/64570f57-337a-403a-9cac-9bf9e556a6df/aW1hZ2UucG5n\" width=\"931\" height=\"618\">\n\n<img src=\"https://content.pstmn.io/6b866ffe-ab9e-434c-b328-df789ad312dd/aW1hZ2UucG5n\" alt=\"\" height=\"787\" width=\"984\">"
+				},
+				{
+					"name": "Ulasan",
+					"item": [
+						{
+							"name": "Review",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "star_rating",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "review",
+											"value": "\"Barang tiba dengan kondisi bungkus yang masih ketat dan tidak ada cacat. Bahannya juga nyaman untuk dipakai. Recommended 10/10.\"",
+											"type": "text"
+										}
+									]
+								},
+								"url": "https://Tokopedia.com/user/{user_id}/reviews/{review_id}"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/x-www-form-urlencoded",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "star_rating",
+													"value": "5",
+													"type": "text"
+												},
+												{
+													"key": "review",
+													"value": "\"Barang tiba dengan kondisi bungkus yang masih ketat dan tidak ada cacat. Bahannya juga nyaman untuk dipakai. Recommended 10/10.\"",
+													"type": "text"
+												}
+											],
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "https://Tokopedia.com/user/{user_id}/reviews/{review_id}"
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\r\n    \"status\": 200,\r\n    \"message\": \"Ulasan berhasil ditambahkan.\",\r\n    \"data\": {\r\n        \"store_name\": \"Plain As Day Official\",\r\n        \"product_name\": \"PLAIN Oversize T-Shirt Beige\",\r\n        \"store_message\": \"Terima kasih telah berbelanja di Plain As Day Official. Bagikan link toko kami untuk terus update mengenai stok dan produk terbaru.\"\r\n    }\r\n}"
+								},
+								{
+									"name": "Failed",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "star_rating",
+													"value": "5",
+													"type": "text"
+												},
+												{
+													"key": "review",
+													"value": "\"Barang tiba dengan kondisi bungkus yang masih ketat dan tidak ada cacat. Bahannya juga nyaman untuk dipakai. Recommended 10/10.\"",
+													"type": "text"
+												}
+											]
+										},
+										"url": "https://Tokopedia.com/user/{user_id}/reviews/{review_id}"
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\r\n    \"status\": 400,\r\n    \"message\": \"Gagal menambahkan ulasan terhadap produk.\"\r\n}"
+								},
+								{
+									"name": "NotFound",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "star_rating",
+													"value": "5",
+													"type": "text"
+												},
+												{
+													"key": "review",
+													"value": "\"Barang tiba dengan kondisi bungkus yang masih ketat dan tidak ada cacat. Bahannya juga nyaman untuk dipakai. Recommended 10/10.\"",
+													"type": "text"
+												}
+											]
+										},
+										"url": "https://Tokopedia.com/user/{user_id}/reviews/{review_id}"
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\r\n    \"status\": 404,\r\n    \"message\": \"Tidak ada produk yang perlu diulas.\"\r\n}"
+								}
+							]
+						}
+					],
+					"description": "Endpoint ini ditujukan untuk menulis sebuah ulasan terhadap produk yang sudah dibeli user.\n\n<img src=\"https://content.pstmn.io/45180907-52f9-4297-b096-a86db74de169/aW1hZ2UucG5n\" alt=\"\" height=\"514\" width=\"940\">"
+				},
+				{
+					"name": "Faktur",
+					"item": [
+						{
+							"name": "Invoice",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "https://Tokopedia.com/user/{user_id}/invoice/{invoice_id}"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "https://Tokopedia.com/user/{user_id}/invoice/{invoice_id}"
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\r\n    \"status\": 200,\r\n    \"message\": \"Faktur berhasil ditampilkan.\",\r\n    \"data\": {\r\n        \"seller\": \"Plain As Day Official\",\r\n        \"buyer\": \"Bennedict Arvin Ryan\",\r\n        \"order_date\": \"12 Apr 2024\",\r\n        \"address\": \"Kampus UNAI Kab. Bandung Barat\",\r\n        \"product_name\": \"PLAIN Oversize T-Shirt Beige\",\r\n        \"unit_price\": 75000,\r\n        \"delivery_fee\": 9200,\r\n        \"total_price\": 84200,\r\n        \"courier\": \"AnterAja\",\r\n        \"payment_method\": \"Debit Online\"\r\n    }\r\n}"
+								},
+								{
+									"name": "Failed",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "https://Tokopedia.com/user/{user_id}/invoice/{invoice_id}"
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\r\n    \"status\": 400,\r\n    \"message\": \"Gagal untuk menampilkan invoice produk.\"\r\n}"
+								},
+								{
+									"name": "NotFound",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "https://Tokopedia.com/user/{user_id}/invoice/{invoice_id}"
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\r\n    \"status\": 404,\r\n    \"message\": \"Invoice produk tidak ditemukan.\"\r\n}"
+								}
+							]
+						}
+					],
+					"description": "Endpoint ini akan menampilkan faktur/invoice dari transaksi pembelian user.\n\n<img src=\"https://content.pstmn.io/a4d14f22-050b-4a79-a003-67e802881824/aW1hZ2UucG5n\" alt=\"\" height=\"529\" width=\"940\">"
+				},
+				{
+					"name": "MetodePembayaran",
+					"item": [
+						{
+							"name": "PaymentMethod",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://Tokopedia.com/user/{user_id}/payment?payment_id=347",
+									"protocol": "https",
+									"host": [
+										"Tokopedia",
+										"com"
+									],
+									"path": [
+										"user",
+										"{user_id}",
+										"payment"
+									],
+									"query": [
+										{
+											"key": "payment_id",
+											"value": "347"
+										},
+										{
+											"key": "id",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "https://Tokopedia.com/user/{user_id}/payment?payment_id=347",
+											"protocol": "https",
+											"host": [
+												"Tokopedia",
+												"com"
+											],
+											"path": [
+												"user",
+												"{user_id}",
+												"payment"
+											],
+											"query": [
+												{
+													"key": "payment_id",
+													"value": "347"
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\r\n    \"status\": 200,\r\n    \"payment_method\": \"Kartu Kredit/Debit\",\r\n    \"message\": \"Metode pembayaran berhasil dihapus.\"\r\n}"
+								},
+								{
+									"name": "Failed",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "https://Tokopedia.com/user/{user_id}/payment?payment_id=347",
+											"protocol": "https",
+											"host": [
+												"Tokopedia",
+												"com"
+											],
+											"path": [
+												"user",
+												"{user_id}",
+												"payment"
+											],
+											"query": [
+												{
+													"key": "payment_id",
+													"value": "347"
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\r\n    \"status\": 400,\r\n    \"message\": \"Gagal menghapus metode pembayaran, silakan coba lagi!\"\r\n}"
+								},
+								{
+									"name": "NotFound",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "https://Tokopedia.com/user/{user_id}/payment?payment_id=347",
+											"protocol": "https",
+											"host": [
+												"Tokopedia",
+												"com"
+											],
+											"path": [
+												"user",
+												"{user_id}",
+												"payment"
+											],
+											"query": [
+												{
+													"key": "payment_id",
+													"value": "347"
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\r\n    \"status\": 404,\r\n    \"message\": \"Metode pembayaran belum ditambahkan.\"\r\n}"
+								}
+							]
+						}
+					],
+					"description": "Endpoint ini akan menghapus metode pembayaran yang dirasa sudah tidak valid oleh user.\n\n<img src=\"https://content.pstmn.io/23c2daad-8174-4424-a23d-8ab7aaa074bf/aW1hZ2UucG5n\" alt=\"\" height=\"515\" width=\"940\">"
+				}
+			]
+		},
+		{
+			"name": "1119044 -DavidEzer",
+			"item": [
+				{
+					"name": "Product",
+					"item": [
+						{
+							"name": "Add Product - by SKU",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": ""
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n   \"resourceType\": \"Product\",\r\n   \"meta\": {\r\n      \"profile\": [\r\n         \"https://www.tokopedia.com/r4/ahahahas/figure-captain-marvel\"\r\n      ]\r\n   },\r\n   \"identifier\": [\r\n      {\r\n         \"use\": \"official\",\r\n         \"system\": \"https://seller.tokopedia.com/sku\",\r\n         \"value\": \"TG0001\"\r\n      }\r\n   ],\r\n   \"Product Information\": [\r\n      {\r\n         \"use\": \"name\",\r\n         \"line\": [\r\n            \"Figure Captain Marvel\"\r\n         ],\r\n         \"category\": [\r\n            {\r\n               \"url\": \"https://www.tokopedia.com/r4/category\",\r\n               \"etalase\": [\r\n                  {\r\n                     \"url\": \"recommended category\",\r\n                     \"valueCode\": \"10\"\r\n                  },\r\n                  {\r\n                     \"url\": \"Figure\",\r\n                     \"valueCode\": \"1010\"\r\n                  }\r\n               ]\r\n            }\r\n         ]\r\n      }\r\n   ],\r\n   \"ProductDetail\": [\r\n      {\r\n         \"Picture\": [\r\n            {\r\n               \"coding\": [\r\n                  {\r\n                     \"url\": \"http://www.tokopedia.com/r4/picture#0001\",\r\n                  }\r\n               ]\r\n            }\r\n         ],\r\n         \"Condition\":[\r\n            {\r\n               \"coding\": [\r\n                  {\r\n                     \"system\": \"http://www.tokopedia.com/r4/condition#01\"\r\n                  }\r\n               ],\r\n               \"text\": \"Used\"\r\n            }\r\n         ]\r\n      }\r\n   ],\r\n   \"Price\": [\r\n      {\r\n         \"StockPrice\": {\r\n            \"coding\": [\r\n               {\r\n                  \"system\": \"\",\r\n                  \"code\": \"Rp-ID\",\r\n                  \"display\": \"Rupiah\"\r\n               }\r\n            ],\r\n            \"text\": \"Rp. 700.000\"\r\n         },\r\n         \"preferred\": true\r\n      }\r\n   ],\r\n   \"active\": true\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "https://seller.tokopedia.com/add-product/{id_sku}"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\r\n    \"status\": 200,\r\n    \"message\": \"Product telah ditambahkan\",\r\n    \"data\": [\r\n        {\r\n            \"Product-ID\": \"P0001001\"\r\n        }\r\n    ]\r\n}"
+								},
+								{
+									"name": "Failed",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n   \"resourceType\": \"Product\",\r\n   \"meta\": {\r\n      \"profile\": [\r\n         \"https://www.tokopedia.com/r4/ahahahas/figure-captain-marvel\"\r\n      ]\r\n   },\r\n   \"identifier\": [\r\n      {\r\n         \"use\": \"official\",\r\n         \"system\": \"https://seller.tokopedia.com/sku\",\r\n         \"value\": \"TG0001\"\r\n      }\r\n   ],\r\n   \"active\": true,\r\n   \"Product Information\": [\r\n      {\r\n         \"use\": \"name\",\r\n         \"line\": [\r\n            \"Figure Captain Marvel\"\r\n         ],\r\n         \"category\": [\r\n            {\r\n               \"url\": \"https://www.tokopedia.com/r4/category\",\r\n               \"etalase\": [\r\n                  {\r\n                     \"url\": \"recommended category\",\r\n                     \"valueCode\": \"10\"\r\n                  },\r\n                  {\r\n                     \"url\": \"Figure\",\r\n                     \"valueCode\": \"1010\"\r\n                  }\r\n               ]\r\n            }\r\n         ]\r\n      }\r\n   ],\r\n   \"ProductDetail\": [\r\n      {\r\n         \"Picture\": [\r\n            {\r\n               \"coding\": [\r\n                  {\r\n                     \"system\": \"http://www.tokopedia.com/r4/picture#0001\",\r\n                     \"code\": \"C\"\r\n                  }\r\n               ]\r\n            }\r\n         ],\r\n         \"Condition\":[\r\n            {\r\n               \"coding\": [\r\n                  {\r\n                     \"system\": \"http://www.tokopedia.com/r4/condition#01\",\r\n                     \"code\": \"B\"\r\n                  }\r\n               ],\r\n               \"text\": \"Used\"\r\n            }\r\n         ]\r\n      }\r\n   ],\r\n   \"Price\": [\r\n      {\r\n         \"StockPrice\": {\r\n            \"coding\": [\r\n               {\r\n                  \"system\": \"\",\r\n                  \"code\": \"Rp-ID\",\r\n                  \"display\": \"Rupiah\"\r\n               }\r\n            ],\r\n            \"text\": \"Rp. 700.000\"\r\n         },\r\n         \"preferred\": true\r\n      }\r\n   ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "https://seller.tokopedia.com/v1/add-product/{id_sku}"
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 400,\n    \"message\": \"The server cannot or will not process the request due to some error\",\n    \"data\": [\n        {\n            \"resourecesID\": \"RS00001\"\n        }\n    ]\n}"
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": "https://seller.tokopedia.com/v1/add-product/{id_sku}"
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 404,\n    \"message\": \"ID Stock Keeping Unit tidak ditemukan\",\n    \"data\": [\n        {\n            \"resourecesID\": \"RSS00001\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Daftar Produk",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": ""
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "https://seller.tokopedia.com/manage-all-product"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"message\": \"Produk berhasil ditemukan\",\n    \"data\": {\n        \"Product-ID\": \"P0001001\",\n        \"name\": \"Figure Captain Marvel\",\n        \"statistik\": {\n                \"display\": 2,\n                \"reference\": \"Skor/Product\"\n            },\n        \"harga\": 700000,\n        \"stok\": 10,\n        \"status\": true\n    }\n}"
+								},
+								{
+									"name": "Failed",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "https://seller.tokopedia.com/v1/manage-all-product"
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 400,\n    \"message\": \"The server cannot or will not process the request due to some error\"\n}"
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "https://seller.tokopedia.com/v1/manage-all-product"
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 404,\n    \"fault\": {\n        \"faultstring\": \"Invalid API call as no apiproduct match found\",\n        \"detail\": {\n            \"errorcode\": \"keymanagement.service.InvalidAPICallAsNoApiProductMatchFound\"\n        }\n    }\n}"
+								}
+							]
+						}
+					],
+					"description": "- **POST https://seller.tokopedia.com/add-product**\n    \n- GET **https://seller.tokopedia.com/v1/manage-product**"
+				},
+				{
+					"name": "Profile Toko",
+					"item": [
+						{
+							"name": "Store Name and URL",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"url": ""
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "[\r\n    {\r\n        \"op\": \"replace\",\r\n        \"path\": \"/Nama Toko/display\",\r\n        \"value\": \"Ahahahahahaha\"\r\n    }\r\n]",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://seller.tokopedia.com/settings/info?namatoko=ahahahastore",
+											"protocol": "https",
+											"host": [
+												"seller",
+												"tokopedia",
+												"com"
+											],
+											"path": [
+												"settings",
+												"info"
+											],
+											"query": [
+												{
+													"key": "namatoko",
+													"value": "ahahahastore"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n\"identifier\": [\n      {\n         \"use\": \"official\",\n         \"system\": \"https://seller.tokopedia.com/sku\",\n         \"value\": \"TG0001\"\n      }\n   ],\n    \"Nama Toko\": [\n        {\n            \"coding\": [\n                {\n                    \"code\": \"302551006\",\n                    \"display\": \"Ahahahahahaha\",\n                    \"system\": \"http://snomed.info/sct\"\n                }\n            ]\n        }\n    ],\n    \"Domain Toko\": {\n        \"coding\": [\n            {\n                \"code\": \"103693007\",\n                \"display\": \"https://www.tokopedia.com/ahahahas\",\n                \"system\": \"http://snomed.info/sct\"\n            }\n        ]\n    },\n    \"resourceType\": \"Profile Toko\",\n    \"status\": \"completed\",\n    \"subject\": {\n        \"display\": \"Ahahahahahaha\"\n    }\n}"
+								},
+								{
+									"name": "Failed",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"url": "https://seller.tokopedia.com/v1/settings/info"
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\r\n    \"status\": 400,\r\n    \"message\": \"The server cannot or will not process the request due to some error\"\r\n}"
+								},
+								{
+									"name": "No Match Found",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": "https://seller.tokopedia.com/v1/settings/info"
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"fault\": {\n        \"faultstring\": \"Invalid API call as no apiproduct match found\",\n        \"detail\": {\n            \"errorcode\": \"keymanagement.service.InvalidAPICallAsNoApiProductMatchFound\"\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Location",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": ""
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "https://seller.tokopedia.com/settings/address"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\r\n    \"status\": 200,\r\n    \"data\": {\r\n        \"name\": \"AhahahaStore\",\r\n        \"Alamat\": \"Jl. Braga, Kecamatan Sumur bandung, 40111\",\r\n        \"Kota/Kecamatan\": \"Kota Bandung, Sumur bandung\",\r\n        \"Kode Pos\": \"40117\",\r\n        \"Pinpoint Status\": \"true\",\r\n        \"status\": true\r\n    }\r\n}"
+								},
+								{
+									"name": "Failed",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "https://seller.tokopedia.com/v1/settings/address"
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 400,\n    \"message\": \"The server cannot or will not process the request due to some error\"\n}"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "https://seller.tokopedia.com/v1/settings/address"
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 401,\n    \"fault\": {\n        \"faultstring\": \"Invalid pinpoint status\",\n        \"detail\": {\n            \"errorcode\": \"keymanagement.status.InvalidDataStatus\"\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Catatan Toko",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": ""
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "https://seller.tokopedia.com/settings/note"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\r\n    \"status\": 200,\r\n    \"data\": {\r\n        \"title\": \"Jam Operasional\",\r\n        \"desccription\":\"Toko buka setiap Hari 24 Jam\"\r\n    }\r\n}"
+								},
+								{
+									"name": "Failed",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "https://seller.tokopedia.com/v1/settings/note"
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 400,\n    \"message\": \"The server cannot or will not process the request due to some error\"\n}"
+								},
+								{
+									"name": "No description",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "https://seller.tokopedia.com/v1/settings/note"
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 401,\n    \"fault\": {\n        \"faultstring\": \"No desccription attached\",\n        \"detail\": {\n            \"errorcode\": \"keymanagement.data.NoDataAttached\"\n        }\n    }\n}"
+								}
+							]
+						}
+					],
+					"description": "- **PATCH https://seller.tokopedia.com/v1/settings/info**"
+				}
+			]
+		},
+		{
+			"name": "1119016 - Devan Lubianto",
+			"item": [
+				{
+					"name": "Seller( Produk )",
+					"item": [
+						{
+							"name": "Seller( Produk )",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://seller.tokopedia.com /devandotcom/items/{item_id}?product_id=125889",
+									"protocol": "https",
+									"host": [
+										"seller",
+										"tokopedia",
+										"com "
+									],
+									"path": [
+										"devandotcom",
+										"items",
+										"{item_id}"
+									],
+									"query": [
+										{
+											"key": "product_id",
+											"value": "125889"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "?product_id=125889",
+											"query": [
+												{
+													"key": "product_id",
+													"value": "125889"
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\r\n  \"status\": 200,\r\n  \"nama \":\"Baju Pria\",\r\n  \"message\": \"Item  telah dihapus dari toko \"\r\n}"
+								},
+								{
+									"name": "Failed",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": ""
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 400,\n    \"message\": \"Item tidak bisa dihapus, terjadi kegagalan saat ingin menghapus produk\"\n}"
+								},
+								{
+									"name": "NotFound",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": ""
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 404,\n    \"message\": \"Tidak ada item yang ingin anda hapus\"\n}"
+								}
+							]
+						}
+					],
+					"description": "**endpoint berguna untuk menghapus produk yang sudah seller buat**\n\n**Before**\n\n<img src=\"https://lh7-us.googleusercontent.com/lnBTgs6y6zYUnEllkAoT0p2bwYy_3J6GjjYCW5cfB_aLNDdjllf6AkZfJ7tGxNhg9Vg3GRgHG3WVLOvDYo4Gib3XZkdnT4P4U-PHleSBkh7pxhsC_cWVUw9UuV1ssqdpRNv4a07CuNNrG-qi8d6Fuv8\">\n\n**After**\n\n<img src=\"https://lh7-us.googleusercontent.com/qv0H9tFu_FxsmEj0X0rq4T73XV7dWkYTG7j0151wce-9DC5SIGJWTALgPSQUsk1YSix1J29ZbLhjF0meLQg3uhgbirkptKZZEzetsETAmcXkdkAxRMXKuhHpPfcKg9_7WQiqtQKQEsXOQUbN3GKheVI\">"
+				},
+				{
+					"name": "Feedback ( Seller )",
+					"item": [
+						{
+							"name": "Feedback",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "https://seller.tokopedia.com /{user_id}/{nama_item}"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "?product_id=125889",
+											"query": [
+												{
+													"key": "product_id",
+													"value": "125889"
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"nama \": \"Baju Pria\",\n    \"feedback \" : \"baju nya sangat enak dipakai!\"\n}"
+								},
+								{
+									"name": "Failed",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": ""
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 400,\n    \"message\": \"Feedback gagal terkirim, silahkan isi ulang feedback!\"\n}"
+								},
+								{
+									"name": "NotFound",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": ""
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 404,\n    \"message\": \"Tidak ada nama item yang ingin anda cari\"\n}"
+								}
+							]
+						}
+					],
+					"description": "**endpoint ini berguna untuk menampilkan feedback yang kita dapat dari pembeli**\n\n<img src=\"https://lh7-us.googleusercontent.com/D1MaYbjWZgh3sZbAwXQIsUXWpkxmvwyEcXhIMsSA3WC1_K-Yzn-iuXHSnoKvwBa0uQXQe0NeKUEMD6or-9yDB0uO83XJGy1Nj0dTzplkGctivyFi8bTV1RpCInSkSusweU407AckG8e-k9GCXoElG0Y\">"
+				},
+				{
+					"name": "PengaturanToko",
+					"item": [
+						{
+							"name": "New Request",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"resourceType\": \"settings\",\r\n    \"slogan\": \"beli disini murah sekali lho\",\r\n    \"description\": \"toko amanah\",\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://seller.tokopedia.com /devandotcom/settings/info"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": ""
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\r\n  \"status\": 200,\r\n  \"message\": \"Anda berhasil membuat slogan dan deskripsi!\",\r\n  \"data\": [\r\n    {\r\n      \"slogan\": \"beli disini murah sekali lho\",\r\n      \"description\": \"toko amanah\"\r\n    }"
+								},
+								{
+									"name": "Failed",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": ""
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 400,\n    \"message\": \"kata kata tidak dapat dipakai!\"\n}"
+								},
+								{
+									"name": "NotFound",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": ""
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\r\n    \"status\": 404,\r\n    \"message\": \"Tidak dapat menemukan domain yang diinginkan!\"\r\n}"
+								}
+							]
+						}
+					],
+					"description": "**endpoint ini berguna untuk kita memberikan slogan, deskripsi, domain dan gambar toko**\n\n<img src=\"https://lh7-us.googleusercontent.com/seqANqYmTzL5LRuLfzphW5scz6POf-R1hlIsT3KGN2n5My7Ju5fx2EhGCCJrqTS4UgNajvXavulLY6RcydT8Fy5TwFNg5lwD3bI8HHqP6dI2JvqzWGefvffy67rwW2j_qh1PugKXhm5flA5VPlzDuRk\" alt=\"\">"
+				},
+				{
+					"name": "PengaturanToko(Patch)",
+					"item": [
+						{
+							"name": "New Request",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n    {\r\n        \"op\" : \"replace\",\r\n        \"path\" : \"/slogan\",\r\n        \"value\" : \"CIHUYRAMADHAN\"\r\n    }\r\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://seller.tokopedia.com /devandotcom/settings/info"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"url": ""
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 200,\n    \"message\" : \"Slogan sudah diubah!\"\n    \"slogan \": \"CIHUYRAMADHAN\",\n}"
+								},
+								{
+									"name": "Failed",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"url": ""
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 400,\n    \"message\": \"kata kata tidak dapat dipakai!\"\n}"
+								},
+								{
+									"name": "NotFound",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"url": ""
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 404,\n    \"message\": \"Tidak dapat menemukan variable yang diubah!\"\n}"
+								}
+							]
+						}
+					],
+					"description": "**endpoint ini berguna untuk kita mengubah inputan yang sudah diisi dan kita dapat mengubah pada bagian tertentu seperti slogan saja, deskripsi saja, domain saja, atau gambar toko saja** \n\n**Before** \n\n<img src=\"https://lh7-us.googleusercontent.com/cSRAmVMLeGzKBgUm7O-H8sbOFh23zTVTMyFLeyS7h6aiMt4vClju1ggOgfbzbUn98wR4HUivFHiW-rX_qmZU5kI7jlnyULCCMgGfOKXqIpCc1MhTqEtnkjaIPp9IMdUEraFiO6Yb9P3p2KOaM21bgXg\" alt=\"\">\n\n**After** \n\n<img src=\"https://lh7-us.googleusercontent.com/Rg-68iM_pX5Hg8_0MFiD0FycBeZbU4pYod0lfzw0H-9V4E7bMEtgwuyWs-ARIXyc0i3Aq1MGNUdRU0XqTC3erM3O2GOZ4OgXtsGnuGmw_kfqQYZf4r59FE_V9Pc6J02cEs9CgkN9VrLXGZxYS_T_O_s\" alt=\"\">"
+				},
+				{
+					"name": "PesananDikomplain",
+					"item": [
+						{
+							"name": "New Request",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://seller.tokopedia.com /devandotcom/{id_invoive}?invoice_id=01",
+									"protocol": "https",
+									"host": [
+										"seller",
+										"tokopedia",
+										"com "
+									],
+									"path": [
+										"devandotcom",
+										"{id_invoive}"
+									],
+									"query": [
+										{
+											"key": "invoice_id",
+											"value": "01"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "?invoice_id=01",
+											"query": [
+												{
+													"key": "invoice_id",
+													"value": "01"
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\r\n    \"status\": 200,\r\n    \"product_id \": 125889,\r\n    \"nama \": \"Baju Pria\",\r\n    \"tipe_pengajuan \" : \"barang tidak lengkap\",\r\n    \"asal pengiriman \" : \" dari toko\"\r\n}"
+								},
+								{
+									"name": "Failed",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": ""
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 400,\n    \"message\": \"salah menginput invoice_id, silahkan cek ulang!\"\n}"
+								},
+								{
+									"name": "NotFound",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": ""
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 404,\n    \"message\": \"Tidak terdapat invoice_id yang diinput\"\n}"
+								}
+							]
+						}
+					],
+					"description": "**endpoint ini berguna untuk menunjukan seller pesanan yang dikomplain oleh pembeli** \n\n<img src=\"https://lh7-us.googleusercontent.com/CQgWdOxG8_bA2D8SBbSAxyu-HbmtbgNFwLQUDmsV1l_8IycANrioNCZa8yTE0z76y4eJmRoG3Po3Up720KJLNuiwnvOyC4A-CBZTIfivc5nMMorlHbme260pouyifxEReyLCofuQeFaXGb_93udcDhI\" alt=\"\">"
+				}
+			]
+		},
+		{
+			"name": "1121026 - Peter Jaya",
+			"item": [],
+			"description": "ga ngerjain."
+		}
+	]
+}
